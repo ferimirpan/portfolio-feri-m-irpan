@@ -29,10 +29,10 @@
     </script>
     <script>
         // Check local storage for theme preference before rendering to prevent flicker
-        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
+        if (localStorage.getItem('theme') === 'light') {
             document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
         }
     </script>
     <!-- Google Fonts -->
@@ -407,9 +407,10 @@
                 <div
                     class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-800/80 border border-blue-100 dark:border-slate-700 rounded-2xl overflow-hidden group hover:-translate-y-2 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/15 dark:hover:shadow-blue-500/5 flex flex-col h-full lg:col-span-3 md:col-span-2">
                     <div class="p-8 md:flex gap-8 items-center">
-                        <div class="flex-shrink-0 mb-6 md:mb-0 bg-white dark:bg-slate-700 p-4 rounded-full shadow-sm">
-                            <img src="src/img/otokabe-logo.png" alt="Otokabe Logo"
-                                class="h-12 w-auto group-hover:scale-110 transition-transform" />
+                        <div
+                            class="flex-shrink-0 mb-6 md:mb-0 bg-white dark:bg-slate-700 w-24 h-24 rounded-2xl shadow-sm flex items-center justify-center p-2">
+                            <img src="src/img/otokabe-logo.png" alt="Otokabe & Otopos Logo"
+                                class="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform" />
                         </div>
                         <div>
                             <h3 class="text-2xl font-bold text-dark dark:text-white mb-3">Automotive Ecosystem (<a
